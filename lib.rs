@@ -79,29 +79,43 @@ mod nft {
 
         #[ink::test]
         fn default_state() {
+            //Given
             let nft = NFT::default();
-            assert_eq!(nft.get_token_count_for_account(AccountId::from([0x1; 32])), 0);
+
+            //When
+            let tokens = nft.get_token_count_for_account(AccountId::from([0x1; 32]));
+
+            //Then
+            assert_eq!(tokens, 0);
         }
 
         #[ink::test]
         fn mint() {
+            //Given
             let mut nft = NFT::default();
             let account_one = AccountId::from([0x1; 32]);
             let token_id = 95;
 
+            //When
             nft.mint(account_one, token_id);
+
+            //Then
             assert_eq!(nft.get_token_count_for_account(account_one), 1);
         }
 
         #[ink::test]
         fn transfer() {
+            //Given
             let mut nft = NFT::default();
             let account_one = AccountId::from([0x1; 32]);
             let account_two = AccountId::from([0x2; 32]);
             let token_id = 95;
 
+            //When
             nft.mint(account_one, token_id);
             nft.transfer(account_one, account_two, token_id);
+
+            //Then
             assert_eq!(nft.get_token_count_for_account(account_one), 0);
             assert_eq!(nft.get_token_count_for_account(account_two), 1);
         }
