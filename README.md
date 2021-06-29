@@ -31,3 +31,6 @@ You can upload this contract and interract with it either via your own local Can
 - In node settings input custom node endpoint: wss://canvas.polk4.net
 - Upload `nft.contract` into the node via UI  
 - Instantiate a contract and make RPC calls/transactions 🎉
+
+## License
+This NFT template is [MIT](LICENSE)
