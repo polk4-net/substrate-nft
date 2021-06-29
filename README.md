@@ -1,5 +1,5 @@
-##Substrate !ink NFT simple implementation
-****
+#Substrate !ink NFT simple implementation
+***
 This is a simple working version of base NFT smart contract written using latest (as of this date) !ink `3.0.0-rc3`.
 
 To run all tests:
@@ -23,8 +23,8 @@ If you are facing any issues please follow the setup step of substrate environme
 
 https://substrate.dev/substrate-contracts-workshop/#/0/setup
 
-###Testing on using Polk4 canvas network
-****
+##Testing on using Polk4 canvas network
+***
 You can upload this contract and interract with it either via your own local Canvas node or using Polk4 Canvas testnet.
 
 - Head to https://paritytech.github.io/canvas-ui/
